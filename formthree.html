@@ -3,66 +3,77 @@
 
 <head>
     <title> third page</title>
+    <style>
+        .three {
+            background-image: url(./blue-computer-business-style-stereoscopic-powerpoint-background_15ab237d00__960_540.avif);
+            height: 68vh;
+            width: 58;
+            background-repeat: repeat;
+        }
+    </style>
 </head>
 
 <body>
-    <form action="formtwo.html">
-        <fieldset style="background-color: burlywood;">
-            <legend>third page</legend>
-            <!-- ph number -->
-            <label for="ph number"></label>
-            <input type="number" id="number" placeholder="ph number" />
-            <br />
-            <br />
-            <!-- date of birth -->
-            <label for="date of birth"></label>
-            <input type="datetime" id="datetime" placeholder="Date of birth" />
-            <br />
-            <br />
-            <!-- checkbox -->
-            <h3>What laptop do you own ?</h3>
-            <!-- first option -->
-            <label for=" mac">mac</label>
-            <input type="checkbox" id="mac" />
-            <!--second option-->
-            <label for="  linux">linux</label>
-            <input type="checkbox" id="linux" />
-            <!-- third option -->
-            <label for=" window"> window</label>
-            <input type="checkbox" id=" window" />
-            <br />
-            <!-- radio -->
-            <!-- education -->
-            <h3>select your education</h3>
-            <!-- first option -->
-            <input type="radio" id="ed" name="educational" />
-            <label for="radio">Schooling</label>
-            <br>
-            <input type="radio" id="ed" name="educational" />
-            <label for="radio"> college</label>
-            <br>
-            <br />
-            <select>
-                <optgroup label="Jr Batch">
-                    <option value="Batch 1"> Visionary Batch</option>
-                    <option value="Batch 2"> Scholar Batch</option>
-                </optgroup>
-                <optgroup label="Sr Batch">
-                    <option value="Batch 3">Adventesion Batch</option>
-                    <option value="batch 3"> Proficent Batch</option>
-                </optgroup>
-                </optgroup>
-            </select>
-            <br />
-            <br />
-            <textarea placeholder="enter your valuable feedback"></textarea>
-            <br />
-            <br />
+    <fieldset>
+        <legend> academic information</legend>
+        <div class="three">
+            <form action="formtwo.html">
 
-        </fieldset>
+                <!-- radio !-->
+                <label for="radio"> male</label>
+                <input type="radio" name="gender" />
+                <label for="radio"> female</label>
+                <input type="radio" name="gender" />
+                <!-- checkbox -->
+                <h3>What laptop do you own ?</h3>
+                <!-- first option -->
+                <label for=" mac">mac</label>
+                <input type="checkbox" id="mac" />
+                <!--second option-->
+                <label for="  linux">linux</label>
+                <input type="checkbox" id="linux" />
+                <!-- third option -->
+                <label for=" window"> window</label>
+                <input type="checkbox" id=" window" />
+                <br />
+                <!-- radio -->
+                <!-- education -->
+                <h3>select your education</h3>
+                <!-- first option -->
+                <input type="radio" id="ed" name="educational" />
+                <label for="radio">Schooling</label>
+                <br>
+                <input type="radio" id="ed" name="educational" />
+                <label for="radio"> college</label>
+                <br>
+                <br />
+                <select>
+                    <optgroup label="Jr Batch">
+                        <option value="Batch 1"> Visionary Batch</option>
+                        <option value="Batch 2"> Scholar Batch</option>
+                    </optgroup>
+                    <optgroup label="Sr Batch">
+                        <option value="Batch 3">Adventesion Batch</option>
+                        <option value="batch 3"> Proficent Batch</option>
+                    </optgroup>
+                    </optgroup>
+                </select>
+                <br />
+                <br />
+                <textarea placeholder="Previous Technical KNowledge"></textarea>
+                <br />
+                <br />
+                <button class="button " type="preview" class="signupbtn">preview</button>
+                <br />
+                <br />
+                <button class="button" type="click to proceed" class="signupbtn"><a href="form4.html">click to
+                        proceed</a></button>
 
-    </form>
 
+
+            </form>
+        </div>
+    </fieldset>
 </body>
 
 </html>
