@@ -5,8 +5,8 @@
     <title> third page</title>
     <style>
         .three {
-            background-image:url(./assets/image/back3.avif);
-            height: 68vh;
+            background-image: url(./assets/image/back3.avif);
+            height: 78vh;
             width: 58;
             background-repeat: repeat;
         }
@@ -14,37 +14,40 @@
 </head>
 
 <body>
-    <fieldset>
+    <fieldset class="three">
         <legend> academic information</legend>
-        <div class="three">
+        <div>
             <form action="formtwo.html">
-
-                <!-- radio !-->
-                <label for="radio"> male</label>
-                <input type="radio" name="gender" />
-                <label for="radio"> female</label>
-                <input type="radio" name="gender" />
                 <!-- checkbox -->
                 <h3>What laptop do you own ?</h3>
                 <!-- first option -->
+                <img src="./assets/image/mac.png" height="20px" width="25px">
                 <label for=" mac">mac</label>
                 <input type="checkbox" id="mac" />
                 <!--second option-->
+                <img src="./assets/image/linux.png"  height="20px" width="20px">
                 <label for="  linux">linux</label>
                 <input type="checkbox" id="linux" />
                 <!-- third option -->
+                <img src="./assets/image/window.png"  height="20px" width="20px">
                 <label for=" window"> window</label>
                 <input type="checkbox" id=" window" />
                 <br />
                 <!-- radio -->
                 <!-- education -->
-                <h3>select your education</h3>
+                <h3> 🏫 select your education</h3>
                 <!-- first option -->
                 <input type="radio" id="ed" name="educational" />
-                <label for="radio">Schooling</label>
+                <label for="radio">📖Schooling</label>
                 <br>
                 <input type="radio" id="ed" name="educational" />
-                <label for="radio"> college</label>
+                <label for="radio">📚 College</label>
+                <br />
+                <input type="radio" id="ed" name="educational" />
+                <label for="radio">🧑‍🎓Graduation</label>
+                <br>
+                <input type="radio" id="ed" name="educational" />
+                <label for="radio">🎓Post-Graduation</label>
                 <br>
                 <br />
                 <select>
@@ -60,13 +63,20 @@
                 </select>
                 <br />
                 <br />
+                <!-- timing -->
+                <label for="time">prefferd time</label>
+                <input type="time" id="time" />
+                <label for="time"> to</label>
+                <input type="time" id="time" />
+                <br />
+                <br />
                 <textarea placeholder="Previous Technical KNowledge"></textarea>
                 <br />
                 <br />
                 <button class="button " type="preview" class="signupbtn">preview</button>
                 <br />
                 <br />
-                <button class="button" type="click to proceed" class="signupbtn"><a href="form4.html">click to
+                <button class="button" type="click to proceed" class="signupbtn"><a href="formfour.html">click to
                         proceed</a></button>
 
 
