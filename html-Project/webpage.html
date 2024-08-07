@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        table {
+            width: 90vw;
+            height: 150vh;
+            background-color: #B4D6CD;
+            margin-left: 5vw;
+        }
+
+        tr {
+            width: 100%;
+            background-color: black;
+            border-style: none;
+
+        }
+
+        .row-one {
+            height: 50px;
+        }
+
+        .row-two {
+            height: 20vh;
+        }
+
+        .row-three {
+            height: 20vh;
+        }
+
+        .row-four {
+            height: 40vh;
+        }
+
+        .row-one-column {
+            width: 25%;
+            height: 50px;
+            background-color: rgb(10, 10, 9);
+            border-style: solid;
+            border-width: 2px;
+        }
+
+        .row-two-column {
+            width: 25%;
+            height: 20vh;
+            background-color: rgb(8, 8, 8);
+            border-style: solid;
+            border-width: 2px;
+        }
+
+        .row-three-column {
+            width: 25%;
+            height: 40vh;
+            background-color: rgb(20, 21, 21);
+            border-style: solid;
+            border-width: 2px;
+        }
+
+        .row-one-column-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .row-two-column-image {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body style="margin: 0;">
+    <table>
+        <tr>
+            <td class="row-one-column">
+                <div class="row-one-column-image">
+                    <img src="../assets/image/enjoyprogramming.jpeg" alt="">
+                </div>
+            </td>
+            <td class="row-two-column">
+                <div class="row-two-column-image">
+                    <img src="../assets/image/enjoyprogramming.jpeg" alt="">
+                    <img src="../assets/image/enjoyprogramming.jpeg" alt="">
+                </div>
+            </td>
+            <td class="row-three-column">
+                <div class="row-three-column-image">
+                    <img src="../assets/image/enjoyprogramming.jpeg" alt="">
+
+                </div>
+            </td>
+            <td class="row-four -column">
+                <div class="row-four-column-image">
+                    <img src="../assets/image/enjoyprogramming.jpeg" alt="">
+                </div>
+            </td>
+        </tr>
+        <tr class="row-one"></tr>
+        <tr class="row-two"></tr>
+        <tr class="row-three">
+        </tr>
+        <tr class="row-four"></tr>
+    </table>
+</body>
+
+</html>
