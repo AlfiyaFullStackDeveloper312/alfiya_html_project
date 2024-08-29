@@ -1,0 +1,140 @@
+ 
+ <!DOCTYPE html>
+ <html>
+ 
+ <head>
+     <title>layout</title>
+     <style>
+         .main-container {
+             height: 90vh;
+             width: 90vw;
+         }
+         .first-row {
+             height: 40%;
+             display: grid;
+             grid-template-columns: 1fr 1fr;
+         }
+         .one {
+             border-style: solid;
+         }
+         .main {
+             display: flex;
+             flex-direction: column;
+             justify-content: flex-start;
+             align-items: flex-start;
+             padding-left: 15px;
+             padding-top: 20px;
+         }
+         .x {
+             height: 80px;
+             width: 80px;
+             border-style: solid;
+         }
+         .main-one {
+             display: flex;
+             flex-direction: row;
+             justify-content: flex-end;
+             align-items: flex-end;
+             padding-right: 15px;
+         }
+ 
+         .y {
+             height: 80px;
+             width: 80px;
+             border-style: solid;
+         }
+ 
+         .two {
+             display: grid;
+             grid-template-rows: 1fr 1fr 1fr;
+             grid-template-columns: 1fr 1fr 1fr;
+         }
+ 
+         .a {
+             border-style: solid;
+         }
+ 
+         .second-row {
+             height: 60%;
+             display: grid;
+             grid-template-columns: 1fr 2fr;
+         }
+ 
+         .box-one {
+             display: grid;
+             grid-template-rows: 1fr 1fr 1fr;
+         }
+ 
+         .b {
+             border-style: solid;
+         }
+ 
+         .box-two {
+             display: grid;
+             grid-template-rows: 1fr 1fr 1fr;
+         }
+ 
+         .c {
+             display: grid;
+             grid-template-columns: 1fr 1fr;
+         }
+ 
+         .put {
+             border-style: solid;
+         }
+ 
+         .d {
+             border-style: solid;
+         }
+ 
+         .e {
+             border-style: solid;
+         }
+     </style>
+ </head>
+ 
+ <body>
+     <!-- main-container -->
+     <div class="main-container">
+         <!-- first-row -->
+         <div class="first-row">
+             <div class="one">
+                 <div class="main">
+                     <div class="x"></div>
+                 </div>
+                 <div class="main-one">
+                     <div class="y"></div>
+                 </div>
+             </div>
+             <div class="two">
+                 <div class="a"></div>
+                 <div class="a"></div>
+                 <div class="a"></div>
+                 <div class="a"></div>
+                 <div class="a"></div>
+                 <div class="a"></div>
+                 <div class="a"></div>
+                 <div class="a"></div>
+                 <div class="a"></div>
+             </div>
+         </div>
+         <!-- second-row -->
+         <div class="second-row">
+             <div class="box-one">
+                 <div class="b"></div>
+                 <div class="b"></div>
+                 <div class="b"></div>
+             </div>
+             <div class="box-two">
+                 <div class="c">
+                     <div class="put"></div>
+                     <div class="put"></div>
+                 </div>
+                 <div class="d"></div>
+                 <div class="e"></div>
+             </div>
+         </div>
+     </div>
+ </body>
+ 
+ </html>

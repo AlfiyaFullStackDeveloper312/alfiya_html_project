@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html  >
+<head>
+    <title>Document</title>
+    <style>
+        table{
+            height: 200px;
+            width: 200vh;
+            border-style: solid;
+            border-collapse: collapse;
+            text-align: center;
+        }
+        .one{
+            background-color:lightpink;
+        }
+        th{
+            border-style: solid;
+        }
+    </style>
+</head>
+<body>
+  <table>
+    <!-- first row -->
+    <tr class="one">
+        <th>A</th>
+        <th colspan="2">B</th>
+    </tr>
+    <!-- second row -->
+    <tr class="one">
+        <th colspan="2">C</th>
+        <th rowspan="2">D</th>
+    </tr>
+    <!-- third row -->
+    <tr class="one">
+        <th>E</th>
+        <th>F</th>
+    </tr>
+  </table> 
+</body>
+</html>

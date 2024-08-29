@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- css -->
+     <style>
+        /*main-containe  */
+        .main-container{
+            height:90vh;
+            width:90vw;
+            border-style:solid;
+            display:grid;
+        }
+        /* first-box */
+        .first-box{
+            border-style:solid;
+            display:grid;
+             grid-template-rows: 3fr 2fr 1fr;
+        }
+        /* second-box */
+        .second-box{
+            border-style: solid;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        /* second-one */
+        .second-one{
+            border-style: solid;
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+        }
+        /* third-box */
+        .third-box{
+            border-style:solid;
+            display:grid;
+            grid-template-columns: 1fr 1fr 1fr;
+
+        }
+        .first{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+     </style>
+</head>
+<body>
+    <!-- main-container -->
+     <div class="main-container">
+        <!-- first-box -->
+        <div class="first-box">
+            <div class="first"></div>
+            <div class="second"></div>
+        </div>
+        <!-- second-box -->
+        <div class="second-box">
+            <div class="second-one"></div>
+        </div>
+        <!-- third box -->
+        <div class="third-box"></div>
+     </div>
+    
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main-container {
+            height: 100vh;
+            width: 100vw;
+            background-color: red;
+        }
+
+        @media(min-width:1000px) and (max-width:1500px) {
+            .main-container {
+                height: 100vh;
+                width: 100vw;
+                background-color: green;
+            }
+        }
+
+        @media(min-width:700px) and (max-width:1000px) {
+            .main-container {
+                height: 100vh;
+                width: 100vw;
+                background-color:blue;
+            }
+        }
+
+        @media(min-width:400px) and (max-width:700px) {
+            .main-container {
+                height: 100vh;
+                width: 100vw;
+                background-color:silver;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-container"></div>
+</body>
+
+</html>
