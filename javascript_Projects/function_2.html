@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    .main-conatiner {
+      margin-left: 25vw;
+      margin-top: 10vh;
+      width: 50vw;
+      height: 80vh;
+      background-color: #629584;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* FIRST CONTAINER */
+    .first-container {
+      height: 30%;
+      width: 100%;
+      background-color: #243642;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+
+    #display {
+      text-align: center;
+      font-size: 20px;
+      background-color: #243642;
+      height: 100%;
+      width: 100%;
+      border: solid;
+      color: #fff;
+    }
+
+    /* SECOND CONTAINER */
+    .second-container {
+      height: 70%;
+      width: 100%;
+      background-color: #e2f1e7;
+      display: flex;
+      column-gap: 50px;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+
+    button {
+      height: 15%;
+      width: 30%;
+      background-color: #72bf78;
+    }
+  </style>
+  <script>
+    function red(){
+      // ----------------- we can writre in two type---------------------
+      // const z= `Hello, ${name} ! How are you?`;
+      // const y = "hello ," + name + "how ar you";
+      // -------------------
+      // const z = a + b;
+      // ------------------
+      // let
+      // x = 100;
+      // y = 200;
+      // z = x + y;
+      document.getElementById("display").style.backgroundColor = "red";
+
+    }
+    function green() {
+      // -------------
+    //  const z = "bye" + name + "see u soon !";
+      // const z = a - b;
+      // ------------
+      // let x = 100;
+      // y = 200; 
+      // z = x - y;
+      document.getElementById("display").style.backgroundColor = "green";
+    }
+    
+
+</script>
+</head>
+
+<body>
+  <!-- MAIN CONTAINER -->
+  <div class="main-conatiner">
+    <!-- first-container -->
+    <div class="first-container">
+      <input type="text" id="display" readonly />
+    </div>
+    <!-- second-container -->
+    <div class="second-container">
+      <button   onclick="red ()">red</button>
+      <button   onclick="green()">green</button>
+    </div>
+  </div>
+</body>
+
+</html>

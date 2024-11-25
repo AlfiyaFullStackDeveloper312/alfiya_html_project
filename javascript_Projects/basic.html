@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login page</title>
+    <style>
+        /* main-container */
+    .login-container {
+            height: 80%;
+            width: 70%;
+            display: flex;
+            justify-content: center;
+        } 
+        /* second container */
+        .container {
+            height: 50vh;
+            width: 20vw;
+            background-color: lightblue;
+            text-align: center;
+            padding: 5%;
+            margin-top: 50px;
+        }
+        /* input-group styling */
+        .input-group {
+            margin-bottom: 15px;
+        }
+        /* button styling */
+        .btn {
+            background-color: dodgerblue;
+            height: 5vh;
+            width: 100%;
+        }
+        /* display styling */
+        #display {
+            height: 15%;
+            width: 80%;
+            background-color: lightcyan;
+           margin-left: 30px;
+        }
+    </style>
+
+    <script>
+        function clickFunc() {  
+            let x = document.getElementById('input-one').value;
+            let y = document.getElementById('input-one').value;
+            // let y = prompt("enter a number :")
+            z = Number(x) + Number(y);
+            document.getElementById("display").innerHTML = z;
+            console.log(z);
+            alert(z);
+        }
+        function clearFunction() {
+            document.getElementById("display").innerHTML = "";
+        }
+    </script>
+</head>
+
+<body>
+    <div class="login-container">
+        <div class="container">
+            <p id="display">result<p>
+                <!-- first input -->
+            <div class="input-group">
+                <input type="text" id="input-one" placeholder="first input">
+            </div>
+            <!-- second input -->
+            <div class="input-group">
+                <input type="text" id="input-two" placeholder="second input">
+            </div>
+            <!-- click function -->
+            <button class="btn" onclick="clickFunc()">button</butto>
+                <br />
+                <br />
+                <!-- clear function -->
+                <button class="btn" onclick="clearFunction()">AC</button>
+        </div>
+    </div>
+</body>
+
+</html>
