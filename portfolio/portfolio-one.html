@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+     <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+        }
+        /* / / main-container css / / */
+        .main-container {
+            width: 100vw;
+            height: auto;
+        }
+        /* / / container css / / */
+        .first-row {
+            width: 100vw;
+            height: auto;
+            text-align: right;
+            background-color:#000000;
+            position: fixed;
+            z-index: 1;
+        }
+        /* / /  navbar hover css / / */
+        .navbar:hover {
+            color: #778da9;
+        }
+/* /  / navbar css / / */
+        .navbar {
+            color: #fca311;
+            font-size: 30px;
+            margin-left: 90px;
+        }
+        /* / / second row css / / */
+        .second-row {
+            width: 100%;
+            height: auto;
+            background-color:#14213d;
+            display: flex;
+            flex-direction: row;
+        }
+/*/ self-intro css / */
+        .self-intro {
+            width: 60%;
+            height: auto;
+            color: rgb(2, 34, 62);
+            margin-left: 60px;
+        }
+        .image {
+            width: 40%;
+            height: auto;
+            background-color:#14213d;
+        }
+        .third-row {
+            width: 100%;
+            height: auto;
+            background-color:#14213d;
+            display: flex;
+            flex-direction: row;
+        }
+
+        /* / / second-image / / */
+        .second-image {
+            width: 50%;
+            height: auto;
+        }
+
+        .self-info {
+            width: 50%;
+            height: auto;
+        }
+
+        /* / / third-row / / */
+        .forth-row {
+            width: 100%;
+            height: auto;
+            background-color:#14213d;
+            display: flex;
+            flex-direction: row;
+        }
+        /* / / Technical-skill / / */
+        .Technical-skill {
+            width: 50%;
+            height: auto;
+        }
+        /* / / Professional-skill / / */
+        .Professional-skill {
+            width: 50%;
+            height: auto;
+        }  
+input[type="range"] {
+    -webkit-appearance: none;   
+    appearance: none;
+    width: 100%;   
+    height: 8px;   
+    background: #BDC3C7; 
+    border-radius: 5px;   
+    outline: none;  
+   
+}
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;  
+    appearance: none;
+    width: 20px;  
+    height: 20px;  
+    background: #f77f00;  
+    border-radius: 50%;  
+    cursor: pointer;   
+}
+
+ 
+input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #34495E;
+    border-radius: 50%;
+    cursor: pointer;
+}
+input[type="range"]:hover {
+    background: #ccc;   
+} 
+input[type="range"]:focus {
+    outline: none;   
+    background: #bbb;  
+}
+        ul {
+            width: 60%;
+        }
+
+        li {
+            margin-left: 40px;
+            color: #ffffff;
+        }
+
+        /* / / fifth-row / / */
+        .fifth-row {
+            width: 100%;
+            height: auto;
+            background-color:#14213d;
+
+        }
+        /* / / projects css / / */
+        .projects {
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+
+        }
+        /* / / sixth-row / / */
+        .sixth-row {
+            width: 100%;
+            height: auto;
+            background-color:#14213d;
+            display: flex;
+            flex-direction: row;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <!-- first row -->
+        <div class="first-row">
+            <a style="color: #fca311;font-size: 35px; text-align: center;">Portfolio</a>
+            <a class="navbar" href="#Home">Home</a>
+            <a class="navbar" href="#About">About</a>
+            <a class="navbar" href="#Project">Project</a>
+            <a class="navbar" href="#contact">Contact</a>
+        </div>
+
+        <!-- second row -->
+        <div class="second-row">
+            <div class="self-intro" id="Home">
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <h2 style="font: size 35px;color: #fca311;">Hello, It's Me</h2>
+                <h1 style="font-size: 40px;color:#ffffff ;">Alfiya Pathan</h1>
+                <h2 style="color:#fca311  ;">  I'm a Full Stack Developer  </h2>
+                <br />
+                <p style="font-size: larger;color: #F5F7F8;">I'm a Full Stack Developer with experties is to create Website design,
+                </p>
+                <p style="font-size: larger; color: #F5F7F8;">Frontend design,and many more...</p>
+                <br />
+                <br />
+                <a href="https://github.com/AlfiyaFullStackDeveloper312/alfiya_html_project"><img
+                        src="../portfolio/assets/pfgithub1-removebg-preview.png" width="50px" height="50px"></a>
+                <a href="https://mail.google.com/mail/u/0/#inbox"><img
+                        src="../portfolio/assets/pfmail-removebg-preview.png" width="80px" height="50px"></a>
+                <a href="https://www.linkedin.com/feed/"><img src="../portfolio/assets/pflin1-removebg-preview.png"
+                        width="80px" height="45px"></a>
+                <br />
+                <br />
+                <button type="button"
+                    style="width: 100px;height:25px; margin-left: 60px;background-color: #2C3E50; box-shadow: 0 0 1em white;"><a
+                        style="color: #F5F7F8;" href="../portfolio/resume-two.html">Download CV</a></button>
+
+                <br />
+            </div>
+            <div class="image"></div>
+        </div>
+        <!-- third row -->
+        <div class="third-row" id="About">
+            <div class="second-image">
+
+            </div>
+            <div class="self-info">
+                <br />
+                <br />
+                <br />
+                <h1 style="color:#F5F7F8; font-size: 35px;">About <span style="color: #f77f00;">Me</span></h1>
+                <br />
+                <h2 style="color:#faedcd;">Full Stack Developer</h2>
+                <br />
+                <p style="color:#F5F7F8;font-size: larger;"> 
+                    A versatile Full Stack Developer with expertise in both web and mobile application development. I build dynamic, responsive web applications using HTML, CSS, React, Angular, Node.js, and SQL databases, 
+                    while also crafting seamless mobile experiences for iOS platforms using Swift. My approach integrates clean, maintainable code with efficient database management and responsive design, 
+                    ensuring high-performance, user-friendly solutions. Whether developing intuitive websites or robust mobile applications, I’m committed to delivering scalable, 
+                    innovative solutions that drive business success and enhance user satisfaction. Let's collaborate and bring your ideas to life, across all platforms!
+
+
+
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                </p>
+            </div>
+        </div>
+        <!-- forth row -->
+        <div class="forth-row">
+            <!-- technical skill -->
+            <div class="Technical-skill">
+                <h2 style="color: white ;font-size:30px; margin-left: 50px;"> Technical-<span style="color: #fca311;">Skill</span> </h2>
+                <br />
+                <br />
+                <ul>
+                    <li>HTML
+                        <input type="range" id="htmlRange" min="1" max="100" value="90">
+                    </li>
+                    <li>CSS
+                        <input type="range" id="cssRange" min="1" max="100" value="85">
+                    </li>
+                    <li>JavaScript
+                        <input type="range" id="jsRange" min="1" max="100" value="30">
+                    </li>
+                    <li>React-Native
+                        <input type="range" id="reactRange" min="1" max="100" value="0">
+                    </li>
+                    <li>Web Designing
+                        <input type="range" id="designRange" min="1" max="100" value="40">
+                    </li>
+                    <li>Native IOS Development
+                        <input type="range" id="iosRange" min="1" max="100" value="0">
+                    </li>
+                    <li>Mobile Development
+                        <input type="range" id="mobileRange" min="1" max="100" value="0">
+                    </li>
+                    <li>Android Development
+                        <input type="range" id="androidRange" min="1" max="100" value="0">
+                    </li>
+                </ul>
+            </div>
+            <!--Professional-skill -->
+            <div class="Professional-skill">
+                <h2 style="color: white ;font-size:30px; margin-left: 50px;">Professional -<span style="color:  #fca311;">Skill</span></h2>
+            </div>
+        </div>
+        <!-- fifth row -->
+        <div class="fifth-row" id="Project">
+            <br />
+            <br />
+            <br />
+            <h1 style="color: #F5F7F8; font-size: 50px;text-align: center;">Latest<range style="color: #fca311; ">
+                    Projects</range>
+            </h1>
+            <br />
+            <br />
+            <br />
+            <!-- html projects -->
+            <div class="projects">
+               <a href="../portfolio/html_projects.html"><img src="../portfolio/assets/pfhtml-removebg-preview.png" height="220px" width="220px">
+                <!-- css projects -->
+                <a><img src="../portfolio/assets/pfcs-removebg-preview.png" height="220px" width="220px"></a>
+                <!-- Bootstrap -->
+                <a> <img src="../portfolio/assets/botpf-removebg-preview.png" height="220px" width="220px"></a>
+                <!-- jabvascript -->
+                <a> <img src="../portfolio/assets/javapf-removebg-preview.png" height="220px" width="220px"></a>
+            </div>
+        </div>
+        <!-- sixth row -->
+        <div class="sixth-row" id="#Contact">
+            <div class="box-one">
+                <br />
+                <br />
+                <br />
+                <br />
+                <h2 style="color: #F5F7F8;font-size: 35px; text-align: center; ">Contact <span
+                        style="color: #a67ff4;">Me</span></h2>
+                <br />
+                <br />
+                <h2 style="color: #F5F7F8; font-size: 35px;margin-left: 55px; ">Let's Chat.</h2>
+                <h2 style="color: #F5F7F8; font-size: 35px;margin-left: 55px; ">Tell me about your </h2>
+                <h2 style="color: #F5F7F8; font-size: 35px;margin-left: 55px; "> project.</h2>
+                <br />
+                <br />
+                <p style="color:#F5F7F8;margin-left:60px;font-size: 25px">Let's create something together ✨ </p>
+                <br />
+                <a href="https://github.com/AlfiyaFullStackDeveloper312/alfiya_html_project"><img
+                        style="margin-left: 50px;" src="../portfolio/assets/pfgithub1-removebg-preview.png" width="50px"
+                        height="50px"></a>
+                <a href="https://mail.google.com/mail/u/0/#inbox"><img
+                        src="../portfolio/assets/pfmail-removebg-preview.png" width="80px" height="50px"></a>
+                <a href="https://www.linkedin.com/feed/"><img src="../portfolio/assets/pflin1-removebg-preview.png"
+                        width="80px" height="45px"></a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
