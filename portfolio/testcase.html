@@ -1,78 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Document</title>
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-   <style>
-       body{
-           width: 100vw;
-height: 100vh;
-background-color: black;
-       }
-       .projects {
-     padding: 50px;
-     text-align: center;
-   }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        width: 100vw;
+        height: 100vh;
+        background-color: #000000; /* Deep contrast */
+        font-family: "Poppins", sans-serif;
+      }
+     .projects {
+        padding: 50px;
+        text-align: center;
+      }
 
-   .projects h1 {
-     color: #ff007f;
-     font-size: 40px;
-     margin-bottom: 20px;
-   }
+      .projects h1 {
+        color: #fca311; /* Orange highlight */
+        font-size: 40px;
+        margin-bottom: 20px;
+      }
 
-   .project-boxes {
-     display: flex;
-     flex-wrap: wrap;
-     justify-content: center;
-     gap: 30px;
-   }
+      .projects h1 i {
+        font-size: 40px;
+        color: #fca311; /* Icon matches the highlight */
+      }
 
-   .project-box {
-     background: black;
-     padding: 20px;
-     width: 280px;
-     border-radius: 10px;
-     transition: 0.3s;
-     text-align: center;
-     border: 2px solid #ff007f;
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     justify-content: center;
-     height: 200px;
-   }
+      /* Project Box Container */
+      .project-boxes {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+      }
 
-   </style>
-</head>
-<body>
-   <div class="projects" id="Projects">
-       <h1 >Test Cases  <i class="fas fa-clipboard-check" style="font-size: 40px; color:#ff007f;"></i>
-       </h1>      
-       <div class="project-boxes">
-         <!--  1 -->
-         <div class="project-box"  >
-            <a href=""> <img src="https://cdn.prod.website-files.com/619e15d781b21202de206fb5/62f62b00791f0a712a693a46_Core-Benefits-of-Automated-Testing-in-App-Development.webp" height="200px" width="300px"></a>
-          </div>
-         <!--  2 -->
-         <div class="project-box">
-            <a href="https://docs.google.com/spreadsheets/d/1R0vgZma31i2RZWbHKIn2T9jb91VL5eK9IzSM1UrchPU/edit?usp=sharing"><img src="https://cdn.prod.website-files.com/619e15d781b21202de206fb5/6304ea816823cf0a4b06f777_what-is-testing.jpg" width="300px" height="200px"></a>
-          </div>
-         <!--  3-->
-         <div class="project-box">
-             <a href=""><img src="https://cdn.prod.website-files.com/619e15d781b21202de206fb5/62f62b00791f0a712a693a46_Core-Benefits-of-Automated-Testing-in-App-Development.webp" height="200px" width="300px"></a>
-         </div>
-         <!--  4 -->
-         <div class="project-box">
-            <a href=""><img src="https://www.nicepng.com/png/detail/990-9902305_software-testing-certification-course-software-quality.png" width="300px" height="200px"></a>
-         </div>
-         <!-- 5 -->
-         <div class="project-box">
-             <a href=" "><img src="https://img.freepik.com/free-vector/software-tester-concept-illustration_114360-16115.jpg" height="200px" width="300px"></a>
-         </div>
-       </div>
-     </div>
-</body>
+      /* Individual Project Box */
+      .project-box {
+        color: white;
+        background: #14213d; /* Dark Blue */
+        padding: 20px;
+        width: 280px;
+        border-radius: 10px;
+        transition: 0.3s;
+        text-align: center;
+        border: 2px solid #fca311; /* Orange Border */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 200px;
+        box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.1);
+      }
+
+      .project-box:hover {
+        transform: translateY(-5px);
+        background: rgba(255, 255, 255, 0.1);
+        box-shadow: 0px 6px 12px rgba(252, 163, 17, 0.5);
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .project-boxes {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .project-box {
+          width: 90%;
+          max-width: 320px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="projects" id="Projects">
+      <h1>
+        Test Cases
+        <i class="fas fa-clipboard-check" style="font-size: 40px"></i>
+      </h1>
+       
+       <br/>
+       <br/>
+      <div class="project-boxes">
+        <!--  1 -->
+        <div class="project-box">
+          <a href="">
+            <img
+              src="https://cdn.prod.website-files.com/619e15d781b21202de206fb5/62f62b00791f0a712a693a46_Core-Benefits-of-Automated-Testing-in-App-Development.webp"
+              height="200px"
+              width="300px"
+          /></a>Test Case on Log-in Page
+        </div>
+        <!--  2 -->
+        <div class="project-box">
+          <a
+            href="https://docs.google.com/spreadsheets/d/1R0vgZma31i2RZWbHKIn2T9jb91VL5eK9IzSM1UrchPU/edit?usp=sharing"
+            ><img
+              src="https://cdn.prod.website-files.com/619e15d781b21202de206fb5/6304ea816823cf0a4b06f777_what-is-testing.jpg"
+              width="300px"
+              height="200px"
+          /></a>Test Case on Bulb
+        </div>
+        <!--  3-->
+        <div class="project-box">
+          <a href=""
+            ><img
+              src="https://cdn.prod.website-files.com/619e15d781b21202de206fb5/62f62b00791f0a712a693a46_Core-Benefits-of-Automated-Testing-in-App-Development.webp"
+              height="200px"
+              width="300px"
+          /></a>Test Case on Marriage
+        </div>
+        <!--  4 -->
+        <div class="project-box">
+          <a href=""
+            ><img
+              src="https://www.nicepng.com/png/detail/990-9902305_software-testing-certification-course-software-quality.png"
+              width="300px"
+              height="200px"
+          /></a>Test Case on Youtube
+        </div>
+        <!-- 5 -->
+        <div class="project-box">
+          <a href=" "
+            ><img
+              src="https://img.freepik.com/free-vector/software-tester-concept-illustration_114360-16115.jpg"
+              height="200px"
+              width="300px"
+          /></a>Test Case on White Board
+        </div>
+      </div>
+    </div>
+  </body>
 </html>

@@ -13,51 +13,106 @@
       rel="stylesheet"
     />
     <style>
-      body {
-        width: 100vw;
-        height: 100vh;
-        background-color: black;
-      }
-      .projects {
-        padding: 50px;
-        text-align: center;
-      }
+           body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #000000; /* Deep contrast */
+  font-family: 'Poppins', sans-serif;
+}
+/* github link */
+.git  {
+  background-color: #fca311;
+  color: #000000;
+  font-size: 18px;
+  border: none;
+  padding: 12px 24px;
+  border: 2px solid #fca311;
+  border-radius: 6px;
+  margin-top: 20px;
+  transition: all 0.3s ease-in-out;
+}
 
-      .projects h1 {
-        color: #ff007f;
-        font-size: 40px;
-        margin-bottom: 20px;
-      }
+/* Button Hover Effect */
+.git:hover {
+  background-color: transparent;
+  color: #fca311;
+  border-color: #fca311;
+  transform: translateY(-2px);
+}
+.projects {
+  padding: 50px;
+  text-align: center;
+}
 
-      .project-boxes {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 30px;
-      }
+.projects h1 {
+  color: #FCA311; /* Orange highlight */
+  font-size: 40px;
+  margin-bottom: 20px;
+}
 
-      .project-box {
-        background: black;
-        padding: 20px;
-        width: 240px;
-        border-radius: 10px;
-        transition: 0.3s;
-        text-align: center;
-        border: 2px solid #ff007f;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 200px;
-      }
+.projects h1 i {
+  font-size: 40px;
+  color: #FCA311; /* Icon matches the highlight */
+}
+
+/* Project Box Container */
+.project-boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* Individual Project Box */
+.project-box {
+  color: white;
+  background: #14213D; /* Dark Blue */
+  padding: 20px;
+  width: 280px;
+  border-radius: 10px;
+  transition: 0.3s;
+  text-align: center;
+  border: 2px solid #FCA311; /* Orange Border */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+.project-box:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 6px 12px rgba(252, 163, 17, 0.5);
+}
+
+ 
+/* Responsive Design */
+@media (max-width: 768px) {
+  .project-boxes {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-box {
+    width: 90%;
+    max-width: 320px;
+  }
+}
     </style>
   </head>
   <body>
     <div class="projects" id="Projects">
       <h1>
         CSS Projects
-        <i class="fab fa-css3-alt" style="font-size: 40px; color: #ff007f"></i>
+        <i class="fab fa-css3-alt" style="font-size: 40px;  "></i>
       </h1>
+      <button class="git">
+        <a href="https://github.com/AlfiyaFullStackDeveloper312/alfiya_html_project/tree/main/html_Project"></a> Github link
+       </button>
+       <br/>
+       <br/>
       <!-- CSS Project  -->
       <div class="project-boxes">
         <!-- Form  project  -->

@@ -1,69 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Document</title>
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-   <style>
-       body{
-           width: 100vw;
-height: 100vh;
-background-color: black;
-       }
-       .projects {
-     padding: 50px;
-     text-align: center;
-   }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #000000; /* Deep contrast */
+  font-family: 'Poppins', sans-serif;
+}
+ 
+.git  {
+  background-color: #fca311;
+  color: #000000;
+  font-size: 18px;
+  border: none;
+  padding: 12px 24px;
+  border: 2px solid #fca311;
+  border-radius: 6px;
+  margin-top: 20px;
+  transition: all 0.3s ease-in-out;
+}
 
-   .projects h1 {
-     color: #ff007f;
-     font-size: 40px;
-     margin-bottom: 20px;
-   }
+/* Button Hover Effect */
+.git:hover {
+  background-color: transparent;
+  color: #fca311;
+  border-color: #fca311;
+  transform: translateY(-2px);
+}
 
-   .project-boxes {
-     display: flex;
-     flex-wrap: wrap;
-     justify-content: center;
-     gap: 30px;
-   }
 
-   .project-box {
-     background: black;
-     padding: 20px;
-     width: 280px;
-     border-radius: 10px;
-     transition: 0.3s;
-     text-align: center;
-     border: 2px solid #ff007f;
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     justify-content: center;
-     height: 200px;
-   }
+.projects {
+  padding: 50px;
+  text-align: center;
+}
 
-   </style>
-</head>
-<body>
-   <div class="projects" id="Projects">
-       <h1 >Bootstrap Projects <i class="fab fa-bootstrap" style="font-size: 40px; color:#ff007f"></i>
-       </h1>      
-       <div class="project-boxes">
-         
-         <!-- Bootstrap project -->
-         <div class="project-box">
-            <a href="../bootstrap/website.html"> <img src="https://img.freepik.com/free-psd/psd-sweet-cake-logo_1409-3859.jpg" height="200px" width="300px"></a>
-          </div>
-         <!-- javascript project -->
-         <div class="project-box">
+.projects h1 {
+  color: #FCA311; /* Orange highlight */
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.projects h1 i {
+  font-size: 40px;
+  color: #FCA311; /* Icon matches the highlight */
+}
+
+/* Project Box Container */
+.project-boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* Individual Project Box */
+.project-box {
+  color: white;
+  background: #14213D; /* Dark Blue */
+  padding: 20px;
+  width: 280px;
+  border-radius: 10px;
+  transition: 0.3s;
+  text-align: center;
+  border: 2px solid #FCA311; /* Orange Border */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+.project-box:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 6px 12px rgba(252, 163, 17, 0.5);
+}
+
+ 
+/* Responsive Design */
+@media (max-width: 768px) {
+  .project-boxes {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-box {
+    width: 90%;
+    max-width: 320px;
+  }
+}
+
+    </style>
+  </head>
+  <body>
+    <div class="projects" id="Projects">
+      <h1>
+        Bootstrap Projects
+        <i class="fab fa-bootstrap" style="font-size: 40px;"></i>
+      </h1>
+     <button class="git">
+      <a href="https://github.com/AlfiyaFullStackDeveloper312/alfiya_html_project/tree/main/bootstrap">Github link</a>  
+     </button>
+     <br/>
+     <br/>
+      <div class="project-boxes">
+        <!-- Bootstrap project -->
+        <div class="project-box">
+          <a href="../bootstrap/website.html">
+            <img
+              src="https://img.freepik.com/free-psd/psd-sweet-cake-logo_1409-3859.jpg"
+              height="200px"
+              width="300px"
+          /></a>Cake website
+        </div>
+        <!-- javascript project -->
+        <!-- <div class="project-box">
             <a href="../bootstrap/layout-one.html"><img src="https://c4.wallpaperflare.com/wallpaper/848/223/819/nature-jpg-format-download-1920x1200-wallpaper-preview.jpg" width="300px" height="200px">
             </a>
-          </div>
-         
-       </div>
-     </div>
-</body>
+          </div> -->
+      </div>
+    </div>
+  </body>
 </html>
