@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Label</title>
+    <style>
+        /* / main-container / */
+        .main-container {
+            background-color: white;
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            background-image: url(../assets/images/back2.jpg);
+            background-size: cover;
+        }
+
+        /* / container / */
+        .container {
+            height: 50vh;
+            width: 20vw;
+            background-color: #9CAFAA;
+            text-align: center;
+            padding: 5%;
+            margin-top: 30px;
+            border-style: solid;
+            border-width: 2px;
+            border-color: #ccc;
+        }
+
+        .box-one {
+            height: 50%;
+            width: 60%;
+            padding-left: 50px;
+        }
+
+        .box-two {
+            height: 50%;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+        }
+
+        /* / button / */
+        button {
+            background-color: #72BF78;
+            width: 50%;
+            height: 20%;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        /* / Set max-width and height for the image / */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- main-container -->
+    <div class="main-container">
+        <!-- container -->
+        <div class="container">
+            <div class="box-one">
+                <!-- Image of the bulb, initially "off" -->
+                <img src="../assets/image/bulboff.png" alt="Bulb" id="display">
+            </div>
+            <!-- box-one -->
+            <div class="box-two">
+                <!-- button -->
+                <button type="button" onclick="sayHello()">Light is On</button>
+                <button type="button" onclick="sayBye()">Light is Off</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Function to turn on the light (change image to "on")
+        function sayHello() {
+            document.getElementById('display') .src ='../assets/image/bulbon.png';
+        }
+
+        // Function to turn off the light (change image to "off")
+        function sayBye() {
+            document.getElementById('display') .src ='../assets/image/bulboff.png';
+        }
+    </script>
+</body>
+
+</html>

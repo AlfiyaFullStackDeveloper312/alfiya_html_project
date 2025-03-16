@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            width: 100%;
+            background-image: url(https://i.ytimg.com/vi/6SmV0AC1fEA/maxresdefault.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        /*  Main container styling  */
+        .main-container {
+            height: 100%;
+            width: 100%;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        /*  Back button styling  */
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 10px 15px;
+            background:#fca311;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+
+        /* Start button styling  */
+        .start-button {
+            background-color: #14083a;
+            font-size: 40px;
+            color: rgb(255, 245, 245);
+            border-radius: 20px;
+            margin-left: 280px;
+            margin-top: 200px;
+            width: 600px;
+            height: 100px;
+            box-shadow: white 2px 2px 2px;
+        }
+
+        /*  Display area styling  */
+        .display {
+            width: 70%;
+            height: 150px;
+            background-color:#14083a;
+            margin-left: 10%;
+            border-radius: 30px;
+            margin-top: 100px;
+            border-style: solid;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        /*  Text display styling   */
+        .text-display {
+            font-size: 50px;
+            color: white;
+        }
+
+        /*   Button styling  */
+        .button {
+            height: 100px;
+            width: 300px;
+            background-color: #14083a;
+            border-radius: 20px;
+            margin: 10px;
+            margin-left: 14%;
+            margin-top: 40px;
+            font-size: 25px;
+            color: white;
+            font-weight: bold;
+            border: solid wheat;
+        }
+        .button:hover{
+            background-color: #fca311;
+            color: black;
+            border: solid black;
+        }
+
+        /*  Media queries for responsiveness*/
+        @media screen and (max-width: 1024px) {
+            .start-button {
+                font-size: 50px;
+                width: 600px;
+                height: 80px;
+                margin-left: 150px;
+                margin-top: 200px;
+            }
+
+            .text-display {
+                font-size: 50px;
+            }
+
+            .button {
+                width: 400px;
+                height: 80px;
+                font-size: 20px;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .start-button {
+                font-size: 40px;
+                width: 400px;
+                height: 60px;
+                margin-left: 100px;
+                margin-top: 150px;
+            }
+
+            .display {
+                height: 200px;
+                font-size: 20px;
+            }
+
+            .button {
+                width: 300px;
+                height: 60px;
+                font-size: 18px;
+                margin-left: 10%;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .start-button {
+                font-size: 30px;
+                width: 300px;
+                height: 50px;
+                margin-left: 50px;
+                margin-top: 100px;
+            }
+
+            .display {
+                height: 150px;
+                font-size: 18px;
+            }
+
+            .button {
+                width: 250px;
+                height: 50px;
+                font-size: 16px;
+                margin-left: 5%;
+            }
+        }
+
+        /* Responsive styles  */
+        @media only screen and (max-width: 768px) {
+            .back-button {
+                font-size: 16px;
+                padding: 5px 9px;
+            }
+        }
+    </style>
+
+
+    <script>
+        // function for beginning button
+        // hide and unhide function
+        function letsBegin() {
+            document.getElementById("play-button").hidden = true;
+            document.getElementById("main-body").hidden = false;
+            displayQuestion();
+        }
+
+        let questions = [
+            {
+                question: "01. Who was the first Prime Minister of India?",
+                answers: ["A. Sardar Patel", "B. Jawaharlal Nehru", "C. Mahatma Gandhi", "D. Dr. Rajendra Prasad"],
+                correct: 1
+            },
+            {
+                question: "02. Which is the longest river in India?",
+                answers: ["A. Yamuna", "B. Ganga", "C. Brahmaputra", "D. Godavari"],
+                correct: 1
+            },
+            {
+                question: "03. What is the capital of Uttarakhand?",
+                answers: ["A. Dehradun", "B. Haridwar", "C. Nainital", "D. Almora"],
+                correct: 0
+            },
+            {
+                question: "04. Who is known as the Missile Man of India?",
+                answers: ["A. Vikram Sarabhai", "B. APJ Abdul Kalam", "C. Rakesh Sharma", "D. Homi Bhabha"],
+                correct: 1
+            },
+            {
+                question: "05. What is the national bird of India?",
+                answers: ["A. Peacock", "B. Parrot", "C. Sparrow", "D. Kingfisher"],
+                correct: 0
+            },
+            {
+                question: "06. Which Mughal Emperor built the Taj Mahal?",
+                answers: ["A. Akbar", "B. Jahangir", "C. Shah Jahan", "D. Aurangzeb"],
+                correct: 2
+            },
+            {
+                question: "07. Which planet is known as the Red Planet?",
+                answers: ["A. Venus", "B. Mars", "C. Jupiter", "D. Saturn"],
+                correct: 1
+            },
+            {
+                question: "08. What is the chemical formula of water?",
+                answers: ["A. CO2", "B. O2", "C. H2O", "D. H2SO4"],
+                correct: 2
+            },
+            {
+                question: "09. Who invented the telephone?",
+                answers: ["A. Thomas Edison", "B. Nikola Tesla", "C. Alexander Graham Bell", "D. Albert Einstein"],
+                correct: 2
+            },
+            {
+                question: "10. Which Indian festival is known as the festival of lights?",
+                answers: ["A. Holi", "B. Diwali", "C. Dussehra", "D. Raksha Bandhan"],
+                correct: 1
+            }
+        ];
+
+        // question starting from one
+        let currentQuestionIndex = 0;
+        // questio and options 
+        function displayQuestion() {
+            const g = questions[currentQuestionIndex];
+            document.getElementById("text-display").innerHTML = g.question;
+            document.getElementById("option-one").innerHTML = g.answers[0];
+            document.getElementById("option-two").innerHTML = g.answers[1];
+            document.getElementById("option-three").innerHTML = g.answers[2];
+            document.getElementById("option-four").innerHTML = g.answers[3];
+        }
+        // question and correct or incorrect options function
+        function answer(givenAnswer) {
+            document.getElementById("loader").style.display = "block";
+            setTimeout(() => {
+                document.getElementById("loader").style.display = "none";
+                if (questions[currentQuestionIndex].correct === givenAnswer) {
+                    document.getElementById("text-display").innerHTML = "Spot on! That's the perfect response!!";
+                    document.getElementById("text-display").style.color = "green";
+                    currentQuestionIndex++;
+                    if (currentQuestionIndex < questions.length) {
+                        displayQuestion();
+                    } else {
+                        document.getElementById("text-display").innerHTML = "Your bank account has been credited with Rs. 7,00,00,000!";
+                    }
+                } else {
+                    document.getElementById("text-display").innerHTML = "Better luck next time.";
+                    document.getElementById("text-display").style.color = "red";
+                    currentQuestionIndex = 0;
+                    // time taken by loader
+                    setTimeout(displayQuestion, 2100);  
+                }
+            }, 2100);
+        }
+    </script>
+</head>
+
+<body>
+    <!-- Start button -->
+    <!-- <a href="project_js.html" class="back-button"> Back</a> -->
+
+    <button class="start-button" id="play-button" onclick="letsBegin()">PLAY NOW</button>
+
+    <!-- Main game container -->
+    <div class="main-container" id="main-body" hidden="true">
+        <div class="display" id="container">
+            <h4 id="text-display" class="text-display"></h4>
+            <br>
+            <div id="loader" class="loader" style="display: none;"></div>
+        </div>
+
+        <!-- Answer buttons -->
+        <button class="button" id="option-one" onclick="answer(0)"></button>
+        <button class="button" id="option-two" onclick="answer(1)"></button>
+        <button class="button" id="option-three" onclick="answer(2)"></button>
+        <button class="button" id="option-four" onclick="answer(3)"></button>
+    </div>
+</body>
+
+</html>
