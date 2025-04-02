@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-image: url(../../assets/image/bg1.jpg);
+        background-size: cover;
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      /* container css */
+      .container {
+        height: 30%;
+        width: 50%;
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 20px;
+        text-align: center;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-style: solid;
+      }
+      button {
+        background-color: rgb(30, 167, 92);
+        padding: 10px;
+        border-radius: 10px;
+        width: 20%;
+        height: 25%;
+        font-size: 20px;
+        color: white;
+      }
+      #demo {
+        height: 40%;
+        width: 60%;
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      function array() {
+        // const days = ["Sunday", "Monday", "Tuesday"];
+        // const days2 = ["Jan","Feb","March"]
+        // const days3 = ["1","2","3","4","5"]
+        // const array3 = days.concat(days2,days3)
+        // console.log(array3);
+        // document.getElementById('demo').innerHTML = array3
+        // -------------------merge string to array
+        const myArray = ["mac", "linux", "micro"];
+        const myChildren = myArray.concat("safari");
+        document.getElementById("demo").innerHTML = myChildren;
+      }
+    </script>
+    <div class="container">
+      <p id="demo"></p>
+      <button onclick="array()">days</button>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main-container{
+       background-color:white; 
+       width: 100vw;
+       display: flex;
+       justify-content: center;
+   }
+   .container {
+       width:30vw;
+       background-color:rgb(177, 129, 182);
+       text-align: center;
+       padding: 5%;
+       margin-top: 50px;
+       border: solid;
+        
+   }
+   button{
+     background-color: rgb(220, 208, 208);
+     padding: 10px;
+     border-radius:10px;
+     width: 30%;
+     height: 15%;
+     font-size: 20px;
+     border: solid;
+    
+   }
+   input{
+     width: 80%;
+     height: 10%;
+     padding: 10px;
+     border-radius: 10px;
+     font-size: 20px;
+     border: solid;
+   }
+   #demo{
+    width: 90%;
+     height: 10%;
+     padding: 10px;
+     border-radius: 10px;
+     font-size: 20px;
+     border: solid;
+     background-color: white;
+   }
+   
+     </style>
+ </head>
+ <script>
+    function string1(){
+       let a=document.getElementById("first-number").value;
+       let b=document.getElementById("second-number").value;
+       let c= a + b;
+       alert(c);
+       document.getElementById("demo").innerHTML=c; 
+    }
+    function string2(){
+       let a=document.getElementById("first-number").value;
+       let b=document.getElementById("second-number").value;
+       let c= a + Number(b);
+       alert(c);
+       document.getElementById("demo").innerHTML=c; 
+    }
+    function string3(){
+       let a=document.getElementById("first-number").value;
+       let b=document.getElementById("second-number").value;
+       let c= a == b;
+       alert(c);
+       document.getElementById("demo").innerHTML=c; 
+    }
+ </script>
+ <body>
+    <!-- main-container -->
+    <div class="main-container">
+        <div class="container">
+            <!-- result -->
+          <div id="demo">String Operators</div>
+          <br/>
+        <!-- first input -->
+        <label for="number"></label>
+        <input type="text" id="first-number" placeholder="Enter first string">
+        <br/>
+        <br />
+        <!-- second input -->
+        <label for="number"></label>
+        <input type="text" id="second-number" placeholder="Enter second string">
+        <br />
+        <br />
+        <!-- button -->
+        <button type="button"onclick="string1 ()">"Abc"+"def</button>
+        <button type="button"onclick="string2 ()">"10"+10</button> 
+        <button type="button"onclick="string3 ()">"ABC"==abc"</button>
+        <br/>
+        <br/>
+        
+    </div>
+     
+</body>

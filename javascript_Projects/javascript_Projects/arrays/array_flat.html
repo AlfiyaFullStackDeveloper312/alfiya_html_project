@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* body css */
+      body {
+        background-image: url(../../assets/image/bg1.jpg);
+        background-size: cover;
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      /* container css */
+      .container {
+        height: 30%;
+        width: 50%;
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 20px;
+        text-align: center;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-style: solid;
+      }
+      /* button css */
+      button {
+        background-color: rgb(234, 89, 147);
+        padding: 10px;
+        border-radius: 10px;
+        width: 30%;
+        height: 25%;
+        font-size: 20px;
+        color: white;
+      }
+      p {
+        height: 20px;
+        width: 80px;
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h3>
+        The flat() method creates a new array with sub-array elements
+        concatenated to a specified depth. Flattening is useful when you want to
+        convert a multi-dimensional array into a one-dimensional array.
+      </h3>
+      <!-- paragrph -->
+      <p id="demo"></p>
+      <!-- button -->
+      <button onclick="flat()">check</button>
+    </div>
+    <!-- script -->
+    <script>
+      function flat() {
+        const array = [
+          [1, 2],
+          [3, 4],
+          [5, 6],
+          [7, 8],
+        ];
+        let newarray = array.flat();
+        console.log(newarray);
+        document.getElementById("demo").innerHTML = newarray;
+      }
+    </script>
+  </body>
+</html>

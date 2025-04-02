@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Music Player</title>
+    <style>
+        body {
+            background-image: url(https://static.vecteezy.com/system/resources/previews/020/333/164/non_2x/stephen-foster-memorial-day-illustration-with-copy-space-area-and-blue-background-suitable-to-use-on-memorial-day-event-vector.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
+
+        /*  container styling */
+        .container {
+            width: 90%;
+            max-width: 500px;
+            height: auto;
+            text-align: center;
+            padding: 20px;
+            border: solid whitesmoke;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color:rgb(12, 36, 76);
+            /* / background: linear-gradient(45deg, lightblue, navy, #0b1f56); / */
+            background-size: 400% 400%;
+            /* / animation: gradient 15s ease infinite; / */
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .controls {
+            margin-top: 20px;
+        }
+
+        .controls button {
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 0 10px;
+            box-shadow: #dbdbdb 2px 2px 12px;
+            border-radius: 15px;
+            background-color: #061031;
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+
+        .controls input[type="range"] {
+            width: 100%;
+            color: black;
+        }
+
+        #songNameDisplay {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        .songImage {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            margin-bottom: 20px;
+            margin-left: 100px;
+            display: none;
+            border-radius: 10px;
+        }
+
+        /* audio{
+    background-color: #061031;
+    color: whitesmoke;
+} */
+        @media only screen and (max-width: 768px) {
+            .back-button {
+                font-size: 16px;
+                padding: 5px 9px;
+            }
+
+            .songImage {
+                max-width: 200px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <a href="project_js.html" class="back-button">&#8592; Back</a> -->
+    <h1 style="color: white;" >Music Player</h1>
+    <div class="container">
+        <div id="songNameDisplay"></div>
+        <!-- perfect -->
+        <img id="songImage1" class="songImage"
+            src="https://upload.wikimedia.org/wikipedia/en/8/80/Ed_Sheeran_Perfect_Single_cover.jpg">
+        <!-- tenu sang  -->
+        <img id="songImage2" class="songImage"
+            src="https://i.scdn.co/image/ab67616d0000b273e461b9dfdf50466bc608a280">
+        <!-- jane tu -->
+        <img id="songImage3" class="songImage"
+            src="https://c.saavncdn.com/271/Jaane-Tu-From-Chhaava-Hindi-2025-20250131113819-500x500.jpg">
+        <div class="controls">
+            <button id="playPrevBtn">Previous</button>
+            <button id="playPauseBtn">Play</button>
+            <button id="playNextBtn">Next</button>
+            <input type="range" id="volumeControl" min="0" max="1" step="0.1" value="1" style="margin-top: 20px;">
+        </div>
+        <audio id="audioPlayer" controls>
+            <source src="./assets/Dum-Hai-To-Rok-Ke-Bata .mp3" type="audio/mpeg">
+            <source src="./assets/The-Crown-Chhaava.mp3" type="audio/mpeg">
+            <source src="./assets/Maaye-Sky-Force.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Get necessary elements from the DOM
+            const audioPlayer = document.getElementById("audioPlayer");
+            const playPauseBtn = document.getElementById("playPauseBtn");
+            const playNextBtn = document.getElementById("playNextBtn");
+            const playPrevBtn = document.getElementById("playPrevBtn");
+            const volumeControl = document.getElementById("volumeControl");
+            const songNameDisplay = document.getElementById("songNameDisplay");
+            const songImages = document.getElementsByClassName("songImage");
+            let currentSongIndex = 0;
+
+            // Event listener for play/pause button
+            playPauseBtn.addEventListener("click", function () {
+                if (audioPlayer.paused) {
+                    audioPlayer.play();
+                    playPauseBtn.textContent = "Pause";
+                } else {
+                    audioPlayer.pause();
+                    playPauseBtn.textContent = "Play";
+                }
+            });
+
+            // Event listener for next song button
+            playNextBtn.addEventListener("click", function () {
+                currentSongIndex = (currentSongIndex + 1) % audioPlayer.children.length;
+                audioPlayer.src = audioPlayer.children[currentSongIndex].src;
+                audioPlayer.play();
+            });
+
+            // Event listener for previous song button
+            playPrevBtn.addEventListener("click", function () {
+                currentSongIndex = (currentSongIndex - 1 + audioPlayer.children.length) % audioPlayer.children.length;
+                audioPlayer.src = audioPlayer.children[currentSongIndex].src;
+                audioPlayer.play();
+            });
+
+            // Event listener for volume control
+            volumeControl.addEventListener("input", function () {
+                audioPlayer.volume = volumeControl.value;
+            });
+
+            // Event listener when audio starts playing
+            audioPlayer.addEventListener("play", function () {
+                // Display current song name
+                songNameDisplay.textContent = audioPlayer.currentSrc.split("/").pop();
+                // Hide all song images
+                for (let i = 0; i < songImages.length; i++) {
+                    songImages[i].style.display = "none";
+                }
+                // Show image corresponding to current song
+                songImages[currentSongIndex].style.display = "block";
+            });
+
+            // Event listener when audio is paused
+            audioPlayer.addEventListener("pause", function () {
+                // Clear song name display
+                songNameDisplay.textContent = "";
+                // Hide all song images
+                for (let i = 0; i < songImages.length; i++) {
+                    songImages[i].style.display = "none";
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main-container {
+            height: 80%;
+            width: 70%;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* second container */
+        .container {
+            height: 50vh;
+            width: 20vw;
+            background-color: lightblue;
+            text-align: center;
+            padding: 5%;
+            margin-top: 50px;
+        }
+        .btn {
+            background-color: dodgerblue;
+            height: 5vh;
+            width: 100%;
+        }
+        /* display styling */
+        #display {
+            height: 15%;
+            width: 80%;
+            background-color: lightcyan;
+            margin-left: 30px;
+        }
+    </style>
+    <script>
+        function numbertype(chintu) {
+            document.getElementById("display").innerHTML = chintu;
+        }
+        // addition
+        function addfunction() {
+            let x = document.getElementById("number").value;
+            let y = document.getElementById("number").value;
+            let z = Number(x) + Number(y);
+            document.getElementById("display").innerHTML = z;
+        }
+        // multi
+        function multifunction() {
+            document.getElementById("display")
+        }
+        // sub
+        function subfunction() {
+            document.getElementById("display")
+        }
+        // div
+        function divfunction() {
+            document.getElementById("display")
+        }
+        // equal to 
+        function equaltofunction() {
+            document.getElementById("display")
+        }
+    </script>
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="container">
+            <p id="display"></p>
+            <button class="btn" id="number" onclick="numbertype(1)">1</button>
+            <button class="btn" id="number" onclick="numbertype(2)">2</button>
+            <button class="btn" id="number" onclick="numbertype(3)">3</button>
+            <button class="btn" id="number" onclick="numbertype(4)">4</button>
+            <!-- calculation -->
+            <button onclick="addfunction()">add</button>
+            <button onclick="multifunction()">multi</button>
+            <button onclick="subfunction()">sub</button>
+            <button onclick="divfunction()">div</button>
+            <button onclick="equaltofunction()">=</button>
+        </div>
+    </div>
+</body>
+
+</html>

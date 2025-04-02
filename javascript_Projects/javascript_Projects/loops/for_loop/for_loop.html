@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=!, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+           body {
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            height: 50vh;
+            width: 30vw;
+            background-color: rgb(249, 241, 241);
+            text-align: center;
+            padding: 5%;
+            margin-top: 50px;
+            
+
+        }
+
+        button {
+            background-color: rgb(131, 194, 205);
+            padding: 10px;
+            border-radius: 10px;
+            width: 80%;
+            height: 15%;
+            font-size: 20px;
+        }
+
+        input {
+            width: 90%;
+            height: 10%;
+            padding: 10px;
+            border-radius: 10px;
+            font-size: 20px;
+        }
+        h1 {
+            color: black;
+            width:80%;
+            height: 15%;
+        }
+        #demo {
+            width: 90%;
+            height: 100%;
+            padding: 10px;
+            border-radius: 10px;
+            font-size: 20px;
+
+        }
+         
+    </style>
+    <script>
+        // function forloop() {
+        //     // for (let input = 1; input <= 10; input++) {
+        //     //     console.log(input);
+        //     // }
+        //     for (let input = 20; input <= 30; input++) {
+        //         console.log(input);
+        //         // document.getElementById("demo").innerHTML = input + "<br/>"
+        //     }
+        // }
+        // print star in the form of square
+
+        function result() {
+            const num = document.getElementById("first-number").value;
+            let output = "";
+
+            for (let i = 1; i <= num; i++) {
+                for (let j = 1; j <= num; j++) {
+                    output += "*";
+                }
+                output += "<br>";
+            }
+
+            document.getElementById("demo").innerHTML = output;
+        }
+
+
+        // print 1 2 3 4 in the form of square
+        // function result() {
+        //     const num = document.getElementById("first-number").value;
+        //     let output = "";
+
+        //     for (let i = 1; i <= num; i++) { 
+        //         for (let j = 1; j <= num; j++) {
+        //             output += j;
+        //         }
+        //         output += "<br>";
+        //     }
+        //     document.getElementById("demo").innerHTML += output ;
+        // }
+
+        // break a letter
+
+        // function result() {
+        //     const str = "welcome";
+        //     for (i = 0; i < str.length; i++) {
+        //         document.getElementById("demo").innerHTML += str[i] + "<br>";
+        //     }
+
+        // }
+
+
+        // opposite traingle star print
+
+        // function result() {
+        //     const num = document.getElementById("first-number").value;
+        //     for (i = 1; i <= num; i++) {
+
+        //         for (j = num; j >= i; j--) {
+        //             document.getElementById("demo").innerHTML += "*";
+        //         }
+        //         document.getElementById("demo").innerHTML += "<br>";
+        //     }
+
+        // }
+
+
+        // print star in the form of rectangle
+
+        // function result() {
+        //     const num = document.getElementById("first-number").value;
+        //     for (i = 0; i <= num; i++) {
+
+        //         for (j = 0; j < num ; j++) {
+        //             document.getElementById("demo").innerHTML += "*";
+        //         }
+        //         document.getElementById("demo").innerHTML += " <br>";
+        //     }
+
+        // }
+
+        // print 1 2 3 4 in the form of rectangle
+
+        // function result() {
+        //     const num = document.getElementById("first-number").value;
+        //     for (i = 0; i <= num; i++) {
+
+        //         for (j = 0; j < num; j++) {
+        //             document.getElementById("demo").innerHTML += j + 1;
+        //         }
+        //         document.getElementById("demo").innerHTML += " <br>";
+        //     }
+
+        // }
+
+
+
+        // print 4 3 2 1 (opposite) in the form of rectangle
+
+        // function forloop() {
+        //     const num = document.getElementById("input").value;
+        //     for (i = 0; i <= num; i++) {
+
+        //         for (j = num; j > 0; j--) {
+        //             document.getElementById("demo").innerHTML += j;
+        //         }
+        //         document.getElementById("demo").innerHTML += " <br>";
+        //     }
+
+        // }
+
+
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>for loop javascript</h1>
+        <div id="demo">result</div>
+        <br/>
+        <input type="number" id="input">
+        <br>
+        <br>
+        <button onclick="result()">submit</button>
+        
+    </div>
+</body>
+
+</html>

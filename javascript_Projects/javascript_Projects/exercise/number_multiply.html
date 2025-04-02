@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>login page</title>
+    <style>
+      /* Login Container */
+      .login-container {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center; /* Centers vertically */
+        background-image: url(https://media.istockphoto.com/id/1419844586/vector/stem-blue-horizontal-frame-vector-education-bright-illustration.jpg?s=612x612&w=0&k=20&c=-A1eYLYulujNsiM26lkVy7qMT_Hp82N5EtKHSFRmigk=);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+
+      /* Login Box */
+      .container {
+        height: 45vh;
+        width: 25vw;
+        background-color: rgba(160, 178, 185, 0.9); /* Slight transparency */
+        text-align: center;
+        padding: 20px;
+        border-radius: 15px;
+        border: 2px solid whitesmoke;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      /* Display Box */
+      #display {
+        height: 40px;
+        width: 80%;
+        background-color: lightcyan;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 15px;
+      }
+
+      /* Input css */
+      .input-group {
+        width: 80%;  
+        margin-bottom: 15px;
+      }
+
+      .input-group input {
+        width: 90%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        font-size: 16px;
+        text-align: center;
+      }
+
+      /* Buttons */
+      .btn {
+        background-color: dodgerblue;
+        color: white;
+        padding: 10px;
+        font-size: 16px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        width: 80%;  
+        transition: 0.3s;
+      }
+
+      .btn:hover {
+        background-color: #0d549a;
+      }
+    </style>
+
+    <script>
+      function clickFunc() {
+        let x = document.getElementById("input-one").value;
+        let y = document.getElementById("input-one").value;
+        // let y = prompt("enter a number :")
+        z = Number(x) + Number(y);
+        document.getElementById("display").innerHTML = z;
+        console.log(z);
+        alert(z);
+      }
+      function clearFunction() {
+        document.getElementById("display").innerHTML = "";
+      }
+    </script>
+  </head>
+
+  <body>
+    <div class="login-container">
+      <div class="container">
+        <p id="display">Multiply Numbers</p>
+        <!-- First Input -->
+        <div class="input-group">
+          <input type="text" id="input-one" placeholder="Enter first number" />
+        </div>
+        <!-- Second Input -->
+        <div class="input-group">
+          <input type="text" id="input-two" placeholder="Enter second number" />
+        </div>
+        <!-- function Buttons -->
+        <button class="btn" onclick="clickFunc()">Submit</button>
+        <br />
+        <button class="btn" onclick="clearFunction()">Clear</button>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main-container {
+            background-color: white;
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            height: 50vh;
+            width: 25vw;
+            background-color:white;
+            text-align: center;
+            padding: 5%;
+            margin-top: 50px;
+            border: solid;
+        }
+
+        button {
+            background-color: rgb(25, 150, 31);
+            padding: 10px;
+            border-radius: 10px;
+            width: 70%;
+            height: 15%;
+            font-size: 20px;
+            color: white;
+        }
+
+        input {
+            width: 90%;
+            height: 10%;
+            padding: 10px;
+            border-radius: 10px;
+            font-size: 20px;
+        }
+    </style>
+   <script>
+    // Function to store counter in localStorage
+    function storeCounter(value) {
+        localStorage.setItem("counter", value);
+    }
+
+    // Function to retrieve counter from localStorage
+    function getCounter() {
+        return localStorage.getItem("counter") 
+            ? parseInt(localStorage.getItem("counter")) 
+            : 1; // Start counter at 1
+    }
+
+    // Login function
+    function login() {
+        // Input values
+        let user = document.getElementById("name").value;
+        let pass = document.getElementById("password").value;
+
+        // Get the current counter value from localStorage
+        let counter = getCounter();
+
+        // Check login success
+        if (user === "admin" && pass === "technology") {
+            alert("Login successful");
+            storeCounter(1);
+            window.location.href = "dashboard.html";    
+        } else {
+            if (counter >= 5) {
+                // Maximum attempts reached
+                alert("You have reached the maximum number of attempts");
+                document.getElementById("name").hidden = true;
+                document.getElementById("password").hidden = true;
+            } else {
+                // Increment counter and store in localStorage
+                alert("Login unsuccessful");
+                counter++;
+                storeCounter(counter);
+            }
+        }
+    }
+</script>
+</head>
+
+<body>
+    <!-- main-container -->
+    <div class="main-container">
+        <div class="container">
+            <h1>Login</h1>
+            <form>
+                <!-- first input -->
+                <label for="name"></label>
+                <input type="text" id="name" placeholder="User name">
+                <br />
+                <br />
+                <!-- second input -->
+                <label for="password"></label>
+                <input type="password" id="password" placeholder=" Password">
+                <br />
+                <br />
+                <!-- button -->
+                <button type="button" onclick="login()">log in</button>
+        </div>
+    </div>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main-container {
+            background-color: white;
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            height: 50vh;
+            width: 30vw;
+            background-color: rgb(249, 241, 241);
+            text-align: center;
+            padding: 5%;
+            margin-top: 50px;
+
+        }
+
+        button {
+            background-color: rgb(234, 89, 147);
+            padding: 10px;
+            border-radius: 10px;
+            width: 30%;
+            height: 15%;
+            font-size: 20px;
+            color: white;
+        }
+
+        input {
+            width: 90%;
+            height: 10%;
+            padding: 10px;
+            border-radius: 10px;
+            font-size: 20px;
+        }
+
+        #demo {
+            width: 90%;
+            height: 10%;
+            padding: 10px;
+            border-radius: 10px;
+            font-size: 20px;
+            border: solid;
+        }
+    </style>
+    <script>
+    
+        // input------------
+        function showresult(passnumber) {
+            let output
+            switch (passnumber) {
+                case 1:
+                    output = "Monday"
+                    break;
+                case 2:
+                    output = "Tuesday"
+                    break;
+                case 3:
+                    output = "Wednesday"
+                    break;
+                case 4:
+                    output = "Thursday"
+                    break;
+                case 5:
+                    output = "Friday"
+                    break;
+                case 6:
+                    output = "Saturday"
+                    break;
+                    case 7 :
+                        output ="sunday"
+                        break;
+                default:
+            }
+            document.getElementById("demo").innerHTML = output
+        }
+    </script>
+</head>
+
+<body>
+    <!-- main-container -->
+    <div class="main-container">
+        <div class="container">
+            <div id="demo">result</div>
+            <br />
+            <!-- button -->
+            <button type="button" onclick="showresult(1)">Monday </button>
+            <button type="button" onclick="showresult(2)">Tuesday </button>
+            <button type="button" onclick="showresult(3)">Wednesday </button> <br> <br>
+            <button type="button" onclick="showresult(4)">Thursday </button>
+            <button type="button" onclick="showresult(5)">Friday </button>
+            <button type="button" onclick="showresult(6)"> Saturday</button> <br /> <br />
+            <button type="button" onclick="showresult(7)">Sunday </button>
+
+
+
+        </div>
+    </div>
+
+</body>
+
+</html>

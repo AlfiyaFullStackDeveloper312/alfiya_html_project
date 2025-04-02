@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood-Donation</title>
+    <style>
+         /* Main Container */
+.main-container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centers the container vertically */
+    background-image: url(https://img.freepik.com/free-vector/happy-world-blood-donor-day-red-grey-yellow-background-social-media-design-banner-free-vector_1340-21612.jpg?semt=ais_hybrid);
+    background-size: cover;
+    background-position: center;
+}
+
+/* Card-like Container */
+.container {
+    height: 45vh;
+    width: 25vw;
+    background-color: rgba(255, 255, 255, 0.8);  
+    text-align: center;
+    padding: 20px;
+    border: 2px solid #9f0a0a; /* Highlight color */
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Input Fields */
+input {
+    width: 80%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    text-align: center;
+}
+
+/* Button */
+button {
+    background-color:rgb(109, 102, 102);
+    color: white;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+button:hover {
+    background-color: #50830a;
+}
+/* Heading */
+h1 {
+    color: #14213d;
+    font-size: 24px;
+}
+    </style>
+</head>
+</style>
+</head>
+<body>
+    <!-- main-container -->
+    <div class="main-container">
+        <div class="container">
+            <h1 id="demo">Blood-Donation</h1>
+            <!-- first input -->
+            <!-- <label for="number"></label> -->
+            <input type="number" id="first-number" placeholder="Enter your Age">
+            <br />
+            <br />
+            <!-- second input -->
+            <!-- <label for="number"></label> -->
+            <input type="number" id="second-number" placeholder=" Enter your Weight">
+            <br />
+            <br />
+            <!-- button -->
+            <button type="button" onclick="compare()">Compare </button>
+            <br />
+            <br />
+
+        </div>
+        <script>
+            function compare() {
+                let x = Number(document.getElementById("first-number").value)
+                let y = Number(document.getElementById("second-number").value)
+                if (x >= 18 && y >= 45) {
+                    document.getElementById("demo").innerHTML = ' You Are Eligible';
+
+                }
+                else {
+                    document.getElementById("demo").innerHTML = 'You Are Not Eligible';
+                }
+            }
+
+
+        </script>
+
+</body>
+
+</html

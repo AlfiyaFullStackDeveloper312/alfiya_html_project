@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main-container {
+            background-color: white;
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+        }
+        .container {
+            height: 45vh;
+            width: 20vw;
+            background-color: rgba(255, 255, 255, 0.618);
+            text-align: center;
+            padding: 5%;
+            margin-top: 50px;
+            border: solid;
+        }
+        button {
+            width: 70%;
+            height: 15%;
+            padding: 10px;
+            background-color: #007bff;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            cursor: pointer;
+        }
+        input {
+            width: 90%;
+            height: 10%;
+            padding: 10px;
+            border-radius: 10px;
+            font-size: 20px;
+        }
+    </style>
+    <script>
+        let counter = 1;
+        // function declaration
+        function login() {
+            // input
+            let user = document.getElementById("name").value;
+            let pass = document.getElementById("password").value;
+            // let z =(x=="admin"&& y=="technology"?"loginsuccesful":"login-unsuccesful")
+            // output
+            // document.getElementById("demo").innerHTML= z;
+
+            if (user == "admin" && pass == "technology") {
+                alert(" login succesful")
+                window.location.href = "dashboard.html";
+            }
+            else {
+                if
+                    (counter >= 4) {
+                    alert("you have reached the maximum number of attempts")
+                    document.getElementById("name").hidden = true;
+                    document.getElementById("pass").hidden = true;
+                }
+                else {
+                    alert(" log in unsuccesful")
+                }
+                counter++;
+            }
+        }
+    </script>
+</head>
+<body>
+    <!-- main-container -->
+    <div class="main-container">
+        <div class="container">
+            <h1>Login</h1>
+            <form>
+                <!-- first input -->
+                <label for="name"></label>
+                <input type="text" id="name" placeholder="User name">
+                <br />
+                <br />
+                <!-- second input -->
+                <label for="password"></label>
+                <input type="password" id="password" placeholder=" Password">
+                <br />
+                <br />
+                <!-- button -->
+                <button type="button" onclick="login()">log in</button>
+        </div>
+    </div>
+    </form>
+</body>
+</html>

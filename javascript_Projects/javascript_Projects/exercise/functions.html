@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Layout</title>
+    <style>
+        .main-container {
+            background-color:lightslategrey;
+            height: 80vh;
+            width: 60vw;
+            margin-top: 5%;
+            margin-left: 15%;
+        }
+
+        .first-container {
+            background-color:lightblue;
+            width: 100%;
+            height: 30%;
+            display: flex;
+            flex-direction: column  ;
+            justify-content:center;
+           
+        }
+        #display{
+            height: 40%;
+            width: 80%;
+            margin-left: 10%;
+            text-align: center;
+           
+        }
+        .second-container{
+            background-color: lightgray;
+            width: 100%;
+            height: 70%;
+            display: flex;
+            flex-direction: row  ;
+            justify-content:center;
+            gap: 10%;
+           
+        }
+        button{
+            height: 20%;
+            width: 20%;
+            background-color: lightslategray;
+            margin-top: 10%;
+            color: #fff;
+            font-size: 15px;
+        }
+    </style>
+    <script>
+        // parameter pass
+     function red()
+        {
+        document.getElementById("display").style.backgroundColor = "red"
+       }
+        // Subtraction
+        function green()
+        {
+            document.getElementById("display").style.backgroundColor = "green";
+        }
+        function Alfiya()
+        {
+            alert("hello Divya");
+        }
+        function Sama()
+        {
+            alert("hello Sama");
+        }
+    </script>
+</head>
+
+<body>
+    <!-- Main Container -->
+    <div class="main-container">
+<!-- First Container -->
+        <div class="first-container">
+        <input type="text" id="display" readonly>
+        </div>
+        <!-- Second Container -->
+        <div class="second-container">
+            <!-- function with parameter -->
+            <button class="button" onclick="Alfiya()">Red</button>
+            <!-- function without parameter -->
+            <button class="button" onclick="Sama()">Green</button>
+        </div>
+
+    </div>
+</body>
+
+</html>

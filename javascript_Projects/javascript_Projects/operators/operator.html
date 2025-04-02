@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    .main-conatiner {
+      margin-left: 25vw;
+      margin-top: 10vh;
+      width: 50vw;
+      height: 80vh;
+      background-color: #629584;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* FIRST CONTAINER */
+    .first-container {
+      height: 30%;
+      width: 100%;
+      background-color: #243642;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+
+    #Display {
+      text-align: center;
+      font-size: 20px;
+      background-color:#243642;
+      height: 100%;
+      width: 100%;
+      border: solid;
+      color:#e2f1e7;
+      
+    }
+    /* SECOND CONTAINER */
+    .second-container {
+      height: 70%;
+      width: 100%;
+      background-color: #e2f1e7;
+      display: flex;
+      column-gap: 50px;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+
+    button {
+      height: 15%;
+      width: 20%;
+      background-color: #72bf78;
+    }
+  </style>
+  <script>
+    let x = 20;
+    let y = 10;
+    function  add() {
+    document.getElementById("Display").innerHTML = x + y ;
+    }
+    function sub(){
+        document.getElementById("Display").innerHTML = x - y ;
+    }
+    function multi(){
+        document.getElementById("Display").innerHTML = x * y ;
+    }
+    function div(){
+        document.getElementById("Display").innerHTML = x / y;
+    }
+    function modulo(){
+        document.getElementById("Display").innerHTML = "10 % 20 = " + x % y;
+    }
+    function square(){
+       let  z = y**y
+        document.getElementById("Display").innerHTML =  z;
+    }
+  </script>
+</head>
+
+<body>
+  <!-- MAIN CONTAINER -->
+  <div class="main-conatiner">
+    <!-- first-container -->
+    <div class="first-container">
+       <textarea name="" id="Display">Display</textarea>
+    </div>
+    <!-- second-container -->
+    <div class="second-container">
+      <button type="button" onclick="add()">add</button>
+      <button type="button" onclick="sub()">sub</button>
+      <button type="button" onclick="multi()">multi</button>
+      <button type="button" onclick="div()">div</button>
+      <button type="button" onclick="modulo()">modulo</button>
+      <button type="button" onclick="square()">square</button>
+    </div>
+  </div>
+</body>
+
+</html>                                                                 

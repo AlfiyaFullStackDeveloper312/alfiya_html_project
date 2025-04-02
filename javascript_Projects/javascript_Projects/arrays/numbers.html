@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      button {
+        background-color: rgb(123, 89, 234);
+        padding: 10px;
+        border-radius: 10px;
+        width: 30%;
+        height: 25%;
+        font-size: 20px;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      // 2,4,6,8,12,18,22
+      function number() {
+        const number = [2, 4, 6, 8, 12, 18, 22];
+        let num = number[0];
+        while (number <= 22) {
+          if (num !== 10 && num !== 14 && num !== 20) {
+            console.log(num);
+          }
+          number = number + 2;
+        }
+      }
+    </script>
+    <button onclick="number()">check the number</button>
+  </body>
+</html>

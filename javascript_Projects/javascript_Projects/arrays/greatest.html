@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      button {
+        background-color: rgb(234, 89, 147);
+        padding: 10px;
+        border-radius: 10px;
+        width: 30%;
+        height: 15%;
+        font-size: 20px;
+        color: white;
+      }
+      p {
+        font-size: 50px;
+        color: black;
+      }
+    </style>
+    <script>
+      // function greatest(){
+      //     const number=[1,2,3,4,5,6,7]
+      //     let check = number[4]
+      //     console.log(check)
+      // }
+      // ---------------------------math.max-------------------
+      // function greatest(){
+      //     const number=[1,2,3,4,5,6,7]
+      //     console.log(Math.max(1,2,3,4,5,6,7));
+      // }
+      // ---------------------math.min
+      // function greatest(){
+      //     const number=[1,2,3,4,5,6,7]
+      //     console.log(Math.min(1,2,3,4,5,6,7));
+      // }
+      // ---------------------------with for loop--------------
+      function greatest() {
+        const numbers = [1, 2, 3, 4, 5, 6, 7];
+        let greatestno = numbers[0];
+        for (let i = 1; i < numbers.length; i++) {
+          if (numbers[i] > greatestno) {
+            greatestno = numbers[i];
+          }
+        }
+        console.log(numbers);
+      }
+      // ----------------using while loop-----------------
+      //   const numbers = [1, 2, 3, 4, 5, 6, 7, ];
+      //   let i = 0;
+      //   let greatestno = numbers[0];
+      //   while (i < numbers.length) {
+      //     if (numbers[i] > greatestno) {
+      //       greatestno = numbers[i];
+      //     }
+      //     i++;
+      //   }
+      //   console.log(greatestno);
+      //   document.getElementById('demo').innerHTML = greatestno;
+    </script>
+  </head>
+  <body>
+    <p id="demo">result</p>
+    <button onclick="greatest()">greatest number</button>
+  </body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main-container {
+       background-color:white; 
+       height: 100vh;
+       width: 100vw;
+       display: flex;
+       justify-content: center;
+   }
+   .container {
+       height:50vh;
+       width:30vw;
+       background-color:rgb(249, 241, 241);
+       text-align: center;
+       padding: 5%;
+       margin-top: 50px;
+       border: solid;
+   }
+   button{
+     background-color: rgb(0, 109, 128);
+     padding: 10px;
+     border-radius:10px;
+     width: 90%;
+     height: 10%;
+     font-size: 20px;
+   }
+   input{
+     width: 90%;
+     height: 10%;
+     padding: 10px;
+     border-radius: 10px;
+     font-size: 20px;
+   }
+   #demo{
+    width: 90%;
+     height: 10%;
+     padding: 10px;
+     border-radius: 10px;
+     font-size: 20px;
+     border: solid;
+     background-color: white;
+   }
+     </style>
+ </head>
+ <!-- script -->
+   <script>
+    let x=0;
+    // function addition(){
+    //     a="Hello"
+    //     b="World";
+    //     c=a+b
+    //     console.log(c);
+    //     alert(c);
+    //     document.getElementById("demo").innerHTML=c;
+    // }
+    function Int(){
+        x+=10
+        console.log(x)
+        alert(x);
+        document.getElementById("demo").innerHTML=x;
+    }
+   </script>
+ <body>
+     <!-- main-container -->
+     <div class="main-container">
+         <div class="container">
+             <!-- result -->
+           <div id="demo">result</div>
+           <br/>
+         <!-- first input -->
+         <label for="number"></label>
+         <input type="number" id="first-number" placeholder="Enter first number">
+         <br/>
+         <br />
+         <!-- second input -->
+         <label for="number"></label>
+         <input type="number" id="second-number" placeholder="Enter second number">
+         <br />
+         <br />
+         <!-- button -->
+         <button type="button"onclick="Int()">Add</button>
+        </div>
+     </div>
+      
+</body>
+</html>

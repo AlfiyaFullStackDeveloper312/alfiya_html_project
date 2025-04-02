@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* body css */
+      body {
+        background-image: url(../../assets/image/bg2.jpg);
+        background-size: cover;
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      /* container css */
+      .container {
+        height: 30%;
+        width: 50%;
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 20px;
+        text-align: center;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-style: solid;
+      }
+      /* button css */
+      button {
+        background-color: rgb(183, 89, 234);
+        padding: 10px;
+        border-radius: 10px;
+        width: 20%;
+        height: 20%;
+        font-size: 20px;
+        color: white;
+      }
+      /* paragraph css */
+      p {
+        height: 20px;
+        width: 40px;
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- conatiner -->
+    <div class="container">
+      <!-- paragraph -->
+      <p id="demo"></p>
+      <!-- button -->
+      <button onclick="array()">days</button>
+    </div>
+    ;
+    <script>
+      function array() {
+        const days = ["Monday", "Tuesday"];
+        days[0] = "sunday";
+        document.getElementById("demo").innerHTML = days;
+        console.log(days);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,101 @@
+  
+    <!-- <script>
+        function compare() {
+            let x = document.getElementById("first-number").value;
+            if ((x % 4 === 0 && x % 100 !== 0) || (x % 400 === 0)) {
+                alert(x + " is a Leap Year.");
+                document.getElementById("demo").innerHTML = x + "is a leap year"
+            } else {
+                alert(x + " is not a Leap Year.");
+                document.getElementById("demo").innerHTML = x + "is not a leap year"
+            }
+
+        }
+    </script> -->
+
+
+   
+<!-- ----------------------- -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+   
+    .main-container {
+        background-color: white;
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+    }
+    .container {
+        height: 50vh;
+        width: 30vw;
+        background-color: rgb(249, 241, 241);
+        text-align: center;
+        padding: 5%;
+        margin-top: 50px;
+    }
+    button {
+        background-color: rgb(234, 89, 147);
+        padding: 10px;
+        border-radius: 10px;
+        width: 30%;
+        height: 15%;
+        font-size: 20px;
+        color: white;
+    }
+    input {
+        width: 90%;
+        height: 15%;
+        padding: 10px;
+        border-radius: 10px;
+        font-size: 20px;
+    }
+    #demo {
+        width: 90%;
+        height: 10%;
+        padding: 10px;
+        border-radius: 10px;
+        font-size: 20px;
+        border: solid;
+    }
+</style>
+     <script>
+        function compare() {
+            let x = document.getElementById("first-number").value;
+            if ((x % 4 === 0 && x % 100 !== 0) || (x % 400 === 0)) {
+                alert(x + " is a Leap Year.");
+                document.getElementById("demo").innerHTML = x + "is a leap year"
+            } else {
+                alert(x + " is not a Leap Year.");
+                document.getElementById("demo").innerHTML = x + "is not a leap year"
+            }
+
+        }
+    </script>
+
+</head>
+
+<body>
+        <!-- main-container -->
+  <div class="main-container">
+    <div class="container">
+      <div id="demo">result</div>
+      <br />
+      <!-- first input -->
+      <label for="number"></label>
+      <input type="number" id="first-number" placeholder="Enter Name">
+      <br />
+      <br />
+      <!-- button -->
+      <button type="button" onclick="compare()">year</button>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-image: url(../../assets/image/bg1.jpg);
+        background-size: cover;
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      /* container css */
+      .container {
+        height: 30%;
+        width: 50%;
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 20px;
+        text-align: center;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-style: solid;
+      }
+      button {
+        background-color: rgb(30, 167, 92);
+        padding: 10px;
+        border-radius: 10px;
+        width: 20%;
+        height: 25%;
+        font-size: 20px;
+        color: white;
+      }
+      #demo {
+        height: 40%;
+        width: 60%;
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <p id="demo"></p>
+      <button onclick="array()">days</button>
+    </div>
+    <!-- script -->
+    <script>
+      function array() {
+        const days = ["Sunday", "Monday", "Tuesday"];
+        // -----------shift delete the left side element---------
+        days.shift();
+        console.log(days);
+        document.getElementById("demo").innerHTML = days;
+        // -----unshift add the element--------------
+        // days.unshift("saturday");
+        // console.log(days);
+        // document.getElementById('demo').innerHTML=days
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* body css */
+      body {
+        background-image: url(../../assets/image/bg3.jpg);
+        background-size: cover;
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      /* container css */
+      .container {
+        height: 30%;
+        width: 50%;
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 20px;
+        text-align: center;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-style: solid;
+      }
+      /* button css */
+      button {
+        background-color: rgb(234, 89, 147);
+        padding: 10px;
+        border-radius: 10px;
+        width: 25%;
+        height: 20%;
+        font-size: 20px;
+        color: white;
+      }
+      #demo {
+        height: 20px;
+        width: 40px;
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h3>
+        The join() method also joins all array elements into a string. It
+        behaves just like toString(), but in addition you can specify the
+        separator:
+      </h3>
+      <p id="demo"></p>
+      <br />
+      <!-- button -->
+      <button onclick="join()">click</button>
+    </div>
+    <!-- script -->
+    <script>
+      function join() {
+        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        let fruit = fruits.join("*");
+        console.log(fruit);
+        document.getElementById("demo").innerHTML = fruit;
+      }
+    </script>
+  </body>
+</html>

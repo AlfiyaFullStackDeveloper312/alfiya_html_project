@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>while loop</title>
+    <style>
+        .main-container {
+            background-color: white;
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            background-image: url(../../assets/images/back2.jpg);
+            background-size: cover;
+        }
+
+        .container {
+            height: 60vh;
+            width: 30vw;
+            background-color: lightgray;
+            text-align: center;
+            padding: 5%;
+            margin-top: 50px;
+        }
+
+        input {
+            width: 90%;
+            height: 10%;
+            padding: 10px;
+            border-radius: 10px;
+            font-size: 20px;
+        }
+
+        button {
+            background-color: green;
+            width: 90%;
+            height: 15%;
+            padding: 10px;
+            border-radius: 10px;
+            font-size: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- main-container -->
+    <div class="main-container">
+        <div class="container">
+            <div class="display">
+                <h1 id="demo"></h1>
+            </div>
+            <!-- first input -->
+            <input type="number" id="first-number" placeholder="Enter first number">
+            <br />
+            <br />
+            <!-- Button -->
+            <button type="button" onclick="result()">Result</button>
+        </div>
+    </div>
+    <script>
+
+        // increment
+
+        // function result(){
+        //     let x = 0
+        //     if (true){
+        //         console.log("AAA");
+
+        //     }
+        //     console.log("YYY");
+        //     while(x < 5){
+        //         console.log("Print X--",x);
+        //         x++;
+        //     }
+        //     console.log("ZZ");
+        // }
+
+
+        // decrement
+
+        // function result() {
+        //     let x = 5
+        //     if (true) {
+        //         console.log("AAA");
+
+        //     }
+        //     console.log("YYY");
+        //     while (x >= 0) {
+        //         console.log("Print X--", x);
+        //         x--;
+        //     }
+        //     console.log("ZZ");
+        // }
+
+
+        // 2 4 6 8 10 12......20
+
+        // function result() {
+        //     let x = 2
+
+        //     while (x <= 20) {
+        //         console.log("Print X--", x);
+        //         x = x + 2;
+        //     }
+        //     console.log("ZZ");
+        // }
+
+
+
+
+        // print  2 6 10  18 22
+
+        // function result() {
+        //     let x = 2;
+        //     while (x <= 22) {
+        //         if (x != 14) {
+        //             console.log("Print X--", x);
+        //         }
+        //         x = x + 4;
+        //     }
+        //     console.log("ZZ");
+        // }
+
+
+
+        // print  2 3 4  6  8 9  10  12  14 15
+
+        // function result() {
+        //     let x = 1;
+        //     while (x <= 15) {
+
+        //         if (x % 2 == 0 ||  x % 3 == 0) {
+        //             console.log(x);
+        //         }
+        //         x++;
+        //     }
+        //     console.log("ZZ");
+
+        // }
+
+
+
+        // print day and hour
+
+
+        //     function result() {
+        //         let year = 1;
+        //         while (year <= 365){
+        //             console.log("DAY :",year);
+
+        //         let hour = 1;
+        //         while (hour <= 24) {
+        //             console.log("HOUR :",hour);
+
+        //             hour++;
+        //         }
+        //         year++;
+        //     }
+
+        //     console.log("ZZ");
+        // }
+
+
+
+        // print 5 star 
+
+        // function result() {
+        //     let i = 1;
+        //     while (i <= 5) {
+        //         console.log('*'.repeat(i));
+        //         i += 1;
+        //     }
+        // }
+        // result();
+
+
+
+        // print 5 star  in traingular form
+
+        // function result() {
+        //     let star = 1;
+        //     // Outer loop to control the number of rows
+        //     while (star <= 5) {
+        //         let printStar = 1;
+        //         let output = "";
+
+        //         // Inner loop to add stars to the output string
+        //         while (printStar <= star) {
+        //             output += "*";
+        //             printStar++;
+        //         }
+
+        //         console.log(output);  // Corrected the variable name to 'output'
+        //         star++;  // Increment the number of stars for the next row
+        //     }
+
+        //     console.log("ZZ");  // This is printed after the stars
+        // }
+
+
+
+        // print 5 star in traingle AND OPPOSITE TRAINGLE FORM
+        function result() {
+            let incrementStar = 1;
+            let decrementStar = 4;
+
+            // Increasing pattern
+
+            while (incrementStar <= 5) {
+                let printStar = 1;
+                let output = "";
+                while (printStar <= incrementStar) {
+                    output += "*";
+                    printStar++;
+                }
+                console.log(output); // Correct the variable name to 'output'
+                incrementStar++;
+            }
+
+            // Decreasing pattern
+
+            while (decrementStar >= 1) {
+                let printStar = 1;
+                let output = "";
+                while (printStar <= decrementStar) {
+                    output += "*";
+                    printStar++;
+                }
+                console.log(output); // Correct the variable name to 'output'
+                decrementStar--;
+            }
+
+            console.log("ZZ"); // Print ZZ after the loops
+        }
+
+         
+
+    </script>
+
+</body>
+
+</html>
